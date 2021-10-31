@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+html, body {
+  margin: 0;
+}
+body, button, input, textarea {
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center; /* alinhar na horizontal */
+  align-items: center; 
+  height: 100vh; /* para alinhar na vertical, precisa de dizer o tamanho da tela (no caso, ocupa 100% da tela disponivel */
+}
+:root {
+  --dark-blue:#1D1D1D;
+  --menu-color: #bfbfc1;
+}
+h2, h4 {
+  margin: 5px;
+}
+h1 {
+  font-size: 80px;
+  margin: 0; /* retirar a margin por default */
+  font-weight: 300;
+}
+h4{
+  font-weight: 300;
+}
+.iphone-container {
+  width: 340px;
+  height: 650px;
+  background: var(--dark-blue);
+  border-radius: 50px;
+  border: 20px solid #111;
+  position: relative; /* classe pai */
+  color: #fff;
+  text-align: center;
+  padding: 45px 10px 20px;
+}
+.iphone-container .notch {
+  width: 180px;
+  height: 25px;
+  background: #111;
+  border-radius: 0 0 20px 20px;
+  position: absolute; /* para fixar barra e poder utilizar o padding no container */
+  top: 0; /* para colar a barra no topo*/
+  left: calc(50% - 90px); /* para centralizar a barra*/
+}
+.iphone-container .iphone-menu{
+  width: 90px;
+  height: 2px;
+  background: var(--menu-color);
+  border-radius: 8px;
+  position: absolute; /* classe filho */
+  bottom: 22px;
+  left: calc(50% - 45px);
+}
+.iphone-container svg{
+  width: 100px;
+  height: 100px;
+  margin: 30px 0 5px; /* margem p cima[30] e direita/esquerda[0] baixo[5px]*/
+}
+.iphone-container .week-graus{
+  margin-top: 25px;
+  padding: 0 20px ;
+  text-align: left;
+  display: grid;
+  grid-template-columns: 3fr 1fr; /* 3fr [primeira columa com 3 vezes o tamanho da segunda coluna] */
+  grid-gap: 1rem;
+  color: var(--menu-color);
+}
